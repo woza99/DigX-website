@@ -2139,6 +2139,10 @@ ol li {
 }
 
 @media (max-width: 768px) {
+  body.nav-open {
+    overflow: hidden;
+  }
+
   .header-inner,
   .footer-inner {
     flex-wrap: wrap;
@@ -2232,7 +2236,7 @@ ol li {
   }
 
   .nav {
-    position: absolute;
+    position: fixed;
     inset: 0;
     padding: 6.25rem 1.5rem 2rem;
     background: rgba(7, 8, 14, 0.96);
@@ -2240,6 +2244,7 @@ ol li {
     transition: transform var(--transition);
     flex-direction: column;
     align-items: flex-start;
+    overflow-y: auto;
   }
 
   .nav.open {
@@ -2250,6 +2255,38 @@ ol li {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 0.25rem;
+  }
+
+  .nav-item,
+  .nav-dropdown,
+  .nav-dropdown__toggle {
+    width: 100%;
+  }
+
+  .nav-dropdown__toggle {
+    justify-content: space-between;
+    padding: 0.8rem 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 12px;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .dropdown-menu::before {
+    display: none;
+  }
+
+  .dropdown-link {
+    padding: 0.75rem 1rem;
   }
 
   .nav-link {
@@ -2260,6 +2297,10 @@ ol li {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
   }
 }
 

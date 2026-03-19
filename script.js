@@ -8,6 +8,7 @@ const setNavState = (open) => {
   const expanded = open ? "true" : "false";
   navToggle.setAttribute("aria-expanded", expanded);
   nav.classList.toggle("open", open);
+  document.body.classList.toggle("nav-open", open);
 };
 
 const setDropdownState = (dropdown, open) => {
@@ -43,9 +44,12 @@ window.addEventListener("keydown", (event) => {
 
 // Close mobile menu when a nav link is clicked (mobile)
 const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach((link) => {
+const mobileNavCloseLinks = document.querySelectorAll(".nav-link, .dropdown-link");
+
+mobileNavCloseLinks.forEach((link) => {
   link.addEventListener("click", () => {
     setNavState(false);
+    closeAllDropdowns();
   });
 });
 
