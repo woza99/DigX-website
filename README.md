@@ -1,39 +1,41 @@
-<<<<<<< HEAD
-# DigX-website
-Website for DigX 
-=======
-# Consultancy Website
+# DigX Website
 
-A simple, modern landing page focused on clean UX/UI for a consultancy.
+Professional multi-page marketing site for DigX, built with static HTML, CSS, and vanilla JavaScript.
 
-## Features
+## Stack
 
-- Responsive layout with mobile-friendly navigation
-- Clear sections for services, approach, clients, and contact
-- Modern typography and color palette
-- Accessible navigation and focus states
-
-## Getting started
-
-1. Open `index.html` in a browser (no build step required).
-2. For production, serve from a static host (Netlify, Vercel, GitHub Pages, etc.).
+- HTML5 (multi-page)
+- CSS3 (`styles.css`)
+- Vanilla JavaScript (`script.js`)
 
 ## Pages
 
-This project includes separate pages for each section:
+- `index.html` - Home
+- `about.html` - About Us
+- `services.html` - Services hub
+- `enterprise-digital-change.html` - Service detail
+- `managed-services.html` - Service detail
+- `technical-integration-services.html` - Service detail
+- `collaborative-project-delivery.html` - Service detail
+- `case-studies.html` - Case Studies
+- `partners.html` - Partners
+- `industries.html` - Industries
+- `careers.html` - Careers
+- `contact.html` - Contact
 
-- `index.html` — Home / landing page
-- `about.html` — About us
-- `services.html` — Services
-- `case-studies.html` — Case studies
-- `partners.html` — Partners
-- `industries.html` — Industries
-- `careers.html` — Careers
-- `contact.html` — Contact form
+## Assets
 
-## Customization
+- Primary site logo: `wwwroot/whitelogo.png`
+- Shared styling: `styles.css`
+- Shared interactions: `script.js`
 
-- Update copy in the relevant HTML file.
-- Adjust colors and spacing in `styles.css`.
-- Add real logos to the Clients section on `index.html`.
->>>>>>> 8248837 (Initial commit)
+## Run locally
+
+1. Open `index.html` directly in a browser, or
+2. Serve the folder with any static host.
+
+## Notes
+
+- No build step is required.
+- Navigation and dropdown behavior are handled in `script.js`.
+- Responsive layout and page-level wireframes are handled in `styles.css`.
