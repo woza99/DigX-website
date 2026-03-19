@@ -52,10 +52,10 @@ export default function SiteFooter() {
           <div className="footer-social" aria-label="Follow DigX">
             <span className="footer-social__label">Follow us</span>
             <div className="footer-social-list">
-              <a className="footer-social-link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-              <a className="footer-social-link" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
-              <a className="footer-social-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-              <a className="footer-social-link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+              <a className="footer-social-link" href="https://www.linkedin.com/company/digx" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+              <a className="footer-social-link" href="https://www.facebook.com/digx" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+              <a className="footer-social-link" href="https://twitter.com/digx" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">X</a>
+              <a className="footer-social-link" href="https://www.youtube.com/@digx" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
             </div>
           </div>
         </div>

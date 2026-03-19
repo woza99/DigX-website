@@ -1,13 +1,19 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "DigX | Enterprise Digital Transformation Consultancy for FTSE 100",
+  description: "Enterprise digital transformation consultancy. Strategic leadership and technical expertise for complex change, modernization, and managed services.",
+};
 
 export default function Home() {
   return (
     <>
       <SiteHeader />
 
-      <main>
+      <main id="main-content">
         <section className="hero hero--banner" aria-label="DigX hero section">
           <div className="hero__overlay" />
           <div className="container hero-inner">

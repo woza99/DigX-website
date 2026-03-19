@@ -1,12 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "Careers | DigX | Join Our Team",
+  description: "Explore career opportunities at DigX. We're looking for talented digital transformation specialists to join our team.",
+};
 
 export default function CareersPage() {
   return (
     <>
       <SiteHeader />
-      <main className="careers-page">
+      <main id="main-content" className="careers-page">
         <section className="section careers-hero" id="top-of-careers">
           <div className="container careers-hero-shell">
             <div className="careers-hero-main">

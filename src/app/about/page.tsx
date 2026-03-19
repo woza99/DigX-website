@@ -1,12 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "About DigX | Enterprise Transformation Partner",
+  description: "Learn about DigX - a UK-based digital transformation consultancy trusted by FTSE 100 and regulated sector enterprises since 2012.",
+};
 
 export default function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <section className="section about-hero-section">
           <div className="container about-hero-grid">
             <div className="about-hero-copy">

@@ -1,12 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "Services | DigX | Enterprise Digital Transformation",
+  description: "Service offerings including Enterprise Digital Change, Managed Services, Technical & Integration Services, and Collaborative Project Delivery.",
+};
 
 export default function ServicesPage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <section className="section page-hero-section">
           <div className="container page-hero-grid">
             <div className="page-hero-copy">

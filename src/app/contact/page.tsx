@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <section className="section page-hero-section">
           <div className="container page-hero-grid">
             <div className="page-hero-copy">

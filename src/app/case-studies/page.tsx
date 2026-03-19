@@ -1,12 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "Case Studies | DigX | Enterprise Digital Transformation Results",
+  description: "Real outcomes from enterprise digital transformation projects. See how DigX helps FTSE 100 and regulated sector clients achieve measurable results.",
+};
 
 export default function CaseStudiesPage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <section className="section page-hero-section">
           <div className="container page-hero-grid">
             <div className="page-hero-copy">

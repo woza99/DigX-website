@@ -18,8 +18,34 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "DigX | Strategy and Growth",
-  description: "Consultancy website with modern UX/UI, clear messaging, and easy contact.",
+  title: "DigX | Enterprise Digital Transformation Consultancy",
+  description: "Digital transformation consultancy for FTSE 100 and regulated sectors. Enterprise change management, platform modernization, and managed services.",
+  keywords: ["digital transformation", "enterprise consulting", "change management", "DigX"],
+  metadataBase: new URL("https://woza99.github.io/DigX-website"),
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://woza99.github.io/DigX-website",
+    title: "DigX | Enterprise Digital Transformation",
+    description: "Enterprise digital transformation partner for regulated sectors and high-complexity change.",
+    images: [
+      {
+        url: "https://woza99.github.io/DigX-website/whitelogo.png",
+        width: 190,
+        height: 58,
+        alt: "DigX Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DigX | Enterprise Digital Transformation",
+    description: "Digital transformation consultancy for FTSE 100 and regulated sectors.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
