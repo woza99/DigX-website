@@ -2140,7 +2140,7 @@ ol li {
 
 @media (max-width: 768px) {
   body.nav-open {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .header-inner,
@@ -2236,20 +2236,32 @@ ol li {
   }
 
   .nav {
-    position: fixed;
-    inset: 0;
-    padding: 5.5rem 1.25rem 1.25rem;
-    background: rgba(7, 8, 14, 0.96);
-    transform: translateX(110%);
-    transition: transform var(--transition);
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background: rgba(7, 8, 14, 0.98);
+    border: 1px solid rgba(92, 124, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 55;
   }
 
   .nav.open {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-list {
@@ -2359,8 +2371,9 @@ ol li {
   }
 
   .nav {
-    padding-top: 5rem;
-    padding-bottom: 1rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 0.9rem;
   }
 
   .nav-link,
