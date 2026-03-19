@@ -31,7 +31,7 @@ const navLinks: NavLink[] = [
   { href: "/contact", label: "Contact" },
 ];
 
-const logoSrc = process.env.NODE_ENV === "production" ? "/DigX-website/whitelogo.png" : "/whitelogo.png";
+const basePath = process.env.NODE_ENV === "production" ? "/DigX-website" : "";
 
 export default function SiteHeader() {
   const pathname = usePathname();
@@ -52,7 +52,7 @@ export default function SiteHeader() {
     <header className="site-header" id="top">
       <div className="container header-inner">
         <Link className="brand" href="/" onClick={closeMenus}>
-          <Image src={logoSrc} alt="DigX Logo" width={190} height={58} priority />
+          <Image src={basePath + "/whitelogo.png"} alt="DigX Logo" width={190} height={58} priority />
         </Link>
 
         <button
