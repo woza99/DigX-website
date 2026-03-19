@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact DigX to start a project or ask a question." />
+    <title>Contact Us | DigX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+        <img src="logo.svg" alt="DigX Logo" />
+      </a>
+
+        <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false">
+          <span class="sr-only">Open navigation</span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav class="nav" id="primaryNav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item nav-dropdown">
+              <button class="nav-dropdown__toggle" aria-haspopup="true" aria-expanded="false">
+                Services
+                <span class="dropdown-icon" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Our services</li>
+                <li><a class="dropdown-link" href="enterprise-digital-change.html">Enterprise Digital Change</a></li>
+                <li><a class="dropdown-link" href="managed-services.html">Managed Services</a></li>
+                <li><a class="dropdown-link" href="technical-integration-services.html">Technical & Integration Services</a></li>
+                <li><a class="dropdown-link" href="collaborative-project-delivery.html">Collaborative Project Delivery</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-link" href="services.html">See all services</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+            <li><a class="nav-link" href="partners.html">Partners</a></li>
+            <li><a class="nav-link" href="industries.html">Industries</a></li>
+            <li><a class="nav-link" href="careers.html">Careers</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Work together</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero-section">
+        <div class="container page-hero-grid">
+          <div class="page-hero-copy">
+            <p class="page-kicker">Contact</p>
+            <h1 class="page-headline">Tell us what you are trying to deliver.</h1>
+            <p class="page-subtitle">Share your goals, timeline, and constraints. We will suggest a practical next step and the right engagement model.</p>
+            <div class="page-quicklinks" aria-label="Jump to section">
+              <a class="btn btn-secondary" href="#contact-form">Send a brief</a>
+              <a class="btn btn-secondary" href="#contact-options">Contact options</a>
+              <a class="btn btn-primary" href="services.html">View services</a>
+            </div>
+          </div>
+          <aside class="page-glance" aria-label="Contact at a glance">
+            <h2 class="page-glance__title">At a glance</h2>
+            <dl class="page-stats">
+              <div class="page-stat"><dt>Email</dt><dd>info@dig-x.com</dd></div>
+              <div class="page-stat"><dt>Phone</dt><dd>0121 828 1164</dd></div>
+              <div class="page-stat"><dt>Typical topics</dt><dd>Services, delivery, partnerships</dd></div>
+              <div class="page-stat"><dt>Response</dt><dd>Business-day follow-up</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="contact-form">
+        <div class="container">
+          <header class="section-header">
+            <h2>Start the conversation</h2>
+            <p>Give us a bit of context and we will come back with a focused recommendation.</p>
+          </header>
+
+          <form class="contact-form" name="contact" method="POST" netlify>
+            <div class="form-grid">
+              <label class="form-field">
+                <span class="form-label">Name</span>
+                <input class="input" type="text" name="name" required />
+              </label>
+
+              <label class="form-field">
+                <span class="form-label">Email</span>
+                <input class="input" type="email" name="email" required />
+              </label>
+
+              <label class="form-field" style="grid-column: span 2;">
+                <span class="form-label">Company / Team</span>
+                <input class="input" type="text" name="company" />
+              </label>
+
+              <label class="form-field" style="grid-column: span 2;">
+                <span class="form-label">How can we help?</span>
+                <textarea class="input" name="message" rows="5" required></textarea>
+              </label>
+
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section bg-muted" id="contact-options">
+        <div class="container">
+          <header class="section-header">
+            <h2>Other ways to reach us</h2>
+            <p>Use whichever contact route is easiest for your team.</p>
+          </header>
+          <div class="grid grid--2">
+            <article class="card">
+              <h3 class="card-title">General enquiries</h3>
+              <p class="card-body"><a href="mailto:info@dig-x.com">info@dig-x.com</a></p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Call us</h3>
+              <p class="card-body"><a href="tel:+441218281164">0121 828 1164</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> DigX. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+
