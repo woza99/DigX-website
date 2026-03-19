@@ -2238,13 +2238,14 @@ ol li {
   .nav {
     position: fixed;
     inset: 0;
-    padding: 6.25rem 1.5rem 2rem;
+    padding: 5.5rem 1.25rem 1.25rem;
     background: rgba(7, 8, 14, 0.96);
     transform: translateX(110%);
     transition: transform var(--transition);
     flex-direction: column;
     align-items: flex-start;
-    overflow-y: auto;
+    justify-content: flex-start;
+    overflow: hidden;
   }
 
   .nav.open {
@@ -2255,7 +2256,7 @@ ol li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 0.25rem;
+    gap: 0.1rem;
   }
 
   .nav-item,
@@ -2266,7 +2267,7 @@ ol li {
 
   .nav-dropdown__toggle {
     justify-content: space-between;
-    padding: 0.8rem 0;
+    padding: 0.68rem 0;
   }
 
   .dropdown-menu {
@@ -2286,17 +2287,21 @@ ol li {
   }
 
   .dropdown-link {
-    padding: 0.75rem 1rem;
+    padding: 0.62rem 0.9rem;
   }
 
   .nav-link {
-    padding: 0.8rem 0;
+    padding: 0.68rem 0;
     width: 100%;
   }
 
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .nav > .btn {
+    display: none;
   }
 
   .contact-form {
@@ -2351,6 +2356,17 @@ ol li {
 
   .hero {
     padding: 5.5rem 0 4.5rem;
+  }
+
+  .nav {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-link,
+  .nav-dropdown__toggle,
+  .dropdown-link {
+    font-size: 0.95rem;
   }
 
   .hero-inner {
