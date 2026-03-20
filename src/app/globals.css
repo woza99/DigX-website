@@ -223,7 +223,7 @@ ol li {
   font-size: 0.85rem;
   color: var(--muted);
   padding: 0.55rem 0.6rem;
-  border-radius: 999px;
+  border-radius: 0;
   transition: color var(--transition), background var(--transition);
   border: none;
   background: none;
@@ -271,19 +271,24 @@ ol li {
 .nav-dropdown__toggle:hover,
 .nav-dropdown__toggle:focus-visible {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
+  background: transparent;
 }
 
 .nav-link.active {
-  color: var(--brand);
-  background: rgba(31, 111, 235, 0.2);
+  color: var(--text);
+  background: transparent;
   font-weight: 700;
 }
 
 .nav-dropdown__toggle.active {
-  color: var(--brand);
-  background: rgba(31, 111, 235, 0.2);
+  color: var(--text);
+  background: transparent;
   font-weight: 700;
+}
+
+.nav-link.active::after,
+.nav-dropdown__toggle.active::after {
+  background: rgba(255, 60, 166, 0.96);
 }
 
 .nav-dropdown {

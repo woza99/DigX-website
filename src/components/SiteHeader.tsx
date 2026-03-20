@@ -65,6 +65,18 @@ export default function SiteHeader() {
     setServicesOpen(false);
   };
 
+  const toggleAboutMenu = () => {
+    if (mobileOpen) {
+      setAboutOpen((prev) => !prev);
+    }
+  };
+
+  const toggleServicesMenu = () => {
+    if (mobileOpen) {
+      setServicesOpen((prev) => !prev);
+    }
+  };
+
   return (
     <>
       <a href="#main-content" className="skip-link">Skip to content</a>
@@ -89,12 +101,16 @@ export default function SiteHeader() {
 
           <nav className={`nav${mobileOpen ? " open" : ""}`} id="primaryNav" aria-label="Primary">
             <ul className="nav-list">
-              <li className={`nav-item nav-dropdown${aboutOpen ? " open" : ""}`}>
+              <li
+                className={`nav-item nav-dropdown${aboutOpen ? " open" : ""}`}
+                onMouseEnter={() => !mobileOpen && setAboutOpen(true)}
+                onMouseLeave={() => !mobileOpen && setAboutOpen(false)}
+              >
                 <button
                   className={`nav-dropdown__toggle${isAboutActive ? " active" : ""}`}
                   aria-haspopup="true"
                   aria-expanded={aboutOpen ? "true" : "false"}
-                  onClick={() => setAboutOpen((prev) => !prev)}
+                  onClick={toggleAboutMenu}
                   type="button"
                 >
                   About Us
@@ -111,12 +127,16 @@ export default function SiteHeader() {
                   ))}
                 </ul>
               </li>
-              <li className={`nav-item nav-dropdown${servicesOpen ? " open" : ""}`}>
+              <li
+                className={`nav-item nav-dropdown${servicesOpen ? " open" : ""}`}
+                onMouseEnter={() => !mobileOpen && setServicesOpen(true)}
+                onMouseLeave={() => !mobileOpen && setServicesOpen(false)}
+              >
                 <button
                   className={`nav-dropdown__toggle${isServicesActive ? " active" : ""}`}
                   aria-haspopup="true"
                   aria-expanded={servicesOpen ? "true" : "false"}
-                  onClick={() => setServicesOpen((prev) => !prev)}
+                  onClick={toggleServicesMenu}
                   type="button"
                 >
                   Services
