@@ -14,6 +14,12 @@ export type HiringStep = {
   summary: string;
 };
 
+export type CareersContent = {
+  careerMetrics: CareerMetric[];
+  roleTracks: RoleTrack[];
+  hiringSteps: HiringStep[];
+};
+
 export const careerMetrics: CareerMetric[] = [
   { value: "4", label: "Role tracks" },
   { value: "3-step", label: "Hiring flow" },
@@ -57,3 +63,9 @@ export const hiringSteps: HiringStep[] = [
     summary: "Align on scope, expectations, growth direction, and working style.",
   },
 ];
+
+export const defaultCareersContent: CareersContent = {
+  careerMetrics,
+  roleTracks,
+  hiringSteps,
+};

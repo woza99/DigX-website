@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Careers Content (No Code Push Updates)
+
+The careers page can load its role data from an external JSON endpoint at runtime.
+
+1. Host a JSON file publicly (GitHub raw file, Supabase storage, or similar).
+2. Use the shape from `public/careers-content.sample.json`.
+3. Set environment variable `NEXT_PUBLIC_CAREERS_DATA_URL` to that JSON URL.
+4. Re-deploy once so the environment variable is available in the client bundle.
+
+If the external URL is unavailable, the site automatically falls back to local data in `src/content/careers.ts`.
