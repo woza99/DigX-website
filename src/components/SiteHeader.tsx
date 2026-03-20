@@ -10,6 +10,11 @@ type ServiceLink = {
   label: string;
 };
 
+type AboutLink = {
+  href: string;
+  label: string;
+};
+
 type NavLink = {
   href: string;
   label: string;
@@ -21,6 +26,11 @@ const serviceLinks: ServiceLink[] = [
   { href: "/technical-integration-services", label: "Technical & Integration Services" },
   { href: "/collaborative-project-delivery", label: "Collaborative Project Delivery" },
   { href: "/services", label: "See all services" },
+];
+
+const aboutLinks: AboutLink[] = [
+  { href: "/meet-our-people", label: "Meet Our People" },
+  { href: "/about", label: "About Us" },
 ];
 
 const navLinks: NavLink[] = [
@@ -36,7 +46,13 @@ const basePath = process.env.NODE_ENV === "production" ? "/DigX-website" : "";
 export default function SiteHeader() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const isAboutActive = useMemo(
+    () => pathname.startsWith("/about") || pathname.startsWith("/meet-our-people"),
+    [pathname],
+  );
 
   const isServicesActive = useMemo(
     () => pathname.startsWith("/services") || serviceLinks.some((link) => link.href !== "/services" && pathname.startsWith(link.href)),
@@ -45,6 +61,7 @@ export default function SiteHeader() {
 
   const closeMenus = () => {
     setMobileOpen(false);
+    setAboutOpen(false);
     setServicesOpen(false);
   };
 
@@ -72,10 +89,27 @@ export default function SiteHeader() {
 
           <nav className={`nav${mobileOpen ? " open" : ""}`} id="primaryNav" aria-label="Primary">
             <ul className="nav-list">
-              <li>
-                <Link className={`nav-link${pathname === "/about" ? " active" : ""}`} href="/about" onClick={closeMenus}>
+              <li className={`nav-item nav-dropdown${aboutOpen ? " open" : ""}`}>
+                <button
+                  className={`nav-dropdown__toggle${isAboutActive ? " active" : ""}`}
+                  aria-haspopup="true"
+                  aria-expanded={aboutOpen ? "true" : "false"}
+                  onClick={() => setAboutOpen((prev) => !prev)}
+                  type="button"
+                >
                   About Us
-                </Link>
+                  <span className="dropdown-icon" aria-hidden="true">▾</span>
+                </button>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-header">About DigX</li>
+                  {aboutLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link className="dropdown-link" href={link.href} onClick={closeMenus}>
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
               <li className={`nav-item nav-dropdown${servicesOpen ? " open" : ""}`}>
                 <button

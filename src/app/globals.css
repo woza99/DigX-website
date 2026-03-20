@@ -1904,6 +1904,23 @@ ol li {
   background-clip: text;
 }
 
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.people-card {
+  min-height: 100%;
+}
+
+.people-fields {
+  margin-top: 0.35rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
 .service-detail-hero {
   padding-top: 4.5rem;
 }
@@ -2635,6 +2652,8 @@ textarea.input {
   .about-service-grid,
   .about-facts-grid,
   .impact-grid,
+  .people-grid,
+  .people-fields,
   .service-detail-wrap,
   .service-pillars,
   .service-proof,
