@@ -4,36 +4,41 @@ import SiteHeader from "@/components/SiteHeader";
 
 type LeadershipRole = {
   role: "CEO" | "COO" | "CTO" | "CCO";
-  placeholderName: string;
-  placeholderBio: string;
+  name: string;
+  title: string;
+  bio: string;
 };
 
 const leadershipRoles: LeadershipRole[] = [
   {
     role: "CEO",
-    placeholderName: "Add CEO name",
-    placeholderBio: "Add a short CEO profile covering leadership background, transformation focus, and current priorities.",
+    name: "Rob McLaren",
+    title: "Chief Executive Officer",
+    bio: "Rob sets the strategic direction for DigX and leads enterprise client partnerships, ensuring transformation programmes deliver measurable business outcomes.",
   },
   {
     role: "COO",
-    placeholderName: "Add COO name",
-    placeholderBio: "Add a short COO profile with strengths in operations, delivery governance, and execution quality.",
+    name: "Joel Alexander",
+    title: "Chief Operating Officer",
+    bio: "Joel oversees delivery operations, governance standards, and execution controls so teams can move quickly while maintaining quality and consistency.",
   },
   {
     role: "CTO",
-    placeholderName: "Add CTO name",
-    placeholderBio: "Add a short CTO profile describing architecture leadership, platform strategy, and technology direction.",
+    name: "Peter Neil",
+    title: "Chief Technology Officer",
+    bio: "Peter leads technology strategy, architecture decisions, and engineering capability development across integration, modernization, and platform reliability work.",
   },
   {
     role: "CCO",
-    placeholderName: "Add CCO name",
-    placeholderBio: "Add a short CCO profile highlighting client leadership, commercial strategy, and partnership growth.",
+    name: "Grant Wright",
+    title: "Chief Consulting Officer",
+    bio: "Grant leads consulting quality and client advisory practice, helping organizations align strategy, governance, and execution in complex change programmes.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "Meet Our People | DigX Leadership Team",
-  description: "Meet the DigX leadership team. Add leadership profiles for CEO, COO, CTO, and CCO.",
+  description: "Meet the DigX leadership team across CEO, COO, CTO, and CCO roles.",
 };
 
 export default function MeetOurPeoplePage() {
@@ -47,8 +52,8 @@ export default function MeetOurPeoplePage() {
               <p className="page-kicker">About DigX</p>
               <h1 className="page-headline">Meet our people</h1>
               <p className="page-subtitle">
-                This page is ready for leadership profiles. Add details for each executive role to introduce the
-                team behind DigX delivery.
+                Meet the executive team leading DigX delivery, consulting quality, and enterprise transformation
+                partnerships.
               </p>
             </div>
 
@@ -67,35 +72,16 @@ export default function MeetOurPeoplePage() {
           <div className="container">
             <header className="section-header">
               <h2>Leadership profiles</h2>
-              <p>Replace placeholders with executive names, profile copy, and optional contact details.</p>
+              <p>Executive leadership profiles for DigX core functions.</p>
             </header>
 
             <div className="people-grid" aria-label="Leadership profile cards">
               {leadershipRoles.map((person) => (
                 <article className="card people-card" key={person.role}>
                   <p className="card-kicker">{person.role}</p>
-                  <h3 className="card-title">{person.placeholderName}</h3>
-                  <p className="card-body">{person.placeholderBio}</p>
-
-                  <div className="people-fields" aria-label={`${person.role} profile fields`}>
-                    <label className="form-field">
-                      <span className="form-label">Name</span>
-                      <input className="input" type="text" name={`${person.role.toLowerCase()}-name`} placeholder={`${person.role} full name`} />
-                    </label>
-                    <label className="form-field">
-                      <span className="form-label">Title line</span>
-                      <input className="input" type="text" name={`${person.role.toLowerCase()}-title`} placeholder={`Example: ${person.role}, DigX`} />
-                    </label>
-                    <label className="form-field form-field--full">
-                      <span className="form-label">Profile summary</span>
-                      <textarea
-                        className="input"
-                        rows={4}
-                        name={`${person.role.toLowerCase()}-summary`}
-                        placeholder={`Add a concise professional profile for the ${person.role}.`}
-                      />
-                    </label>
-                  </div>
+                  <h3 className="card-title">{person.name}</h3>
+                  <p className="card-body people-title">{person.title}</p>
+                  <p className="card-body">{person.bio}</p>
                 </article>
               ))}
             </div>
