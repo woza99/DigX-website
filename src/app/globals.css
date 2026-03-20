@@ -296,6 +296,15 @@ ol li {
   position: relative;
 }
 
+.nav-dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 10px;
+}
+
 .nav-dropdown__toggle {
   display: inline-flex;
   align-items: center;
@@ -313,7 +322,7 @@ ol li {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 2px);
   left: 0;
   transform: none;
   width: 280px;
@@ -1918,12 +1927,72 @@ ol li {
 
 .people-card {
   min-height: 100%;
+  gap: 1rem;
+}
+
+.people-hero-note {
+  margin: 1.1rem 0 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(92, 124, 255, 0.24);
+  border-radius: 12px;
+  background: rgba(92, 124, 255, 0.08);
+  color: rgba(230, 241, 255, 0.93);
+  font-weight: 600;
+}
+
+.people-card__head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.people-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.96);
+  background: linear-gradient(145deg, rgba(255, 60, 166, 0.68), rgba(92, 124, 255, 0.68));
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  box-shadow: 0 10px 24px rgba(5, 18, 38, 0.45);
 }
 
 .people-title {
   color: rgba(168, 211, 255, 0.96);
   font-weight: 700;
   margin-top: -0.25rem;
+}
+
+.people-role-code {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.people-focus {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.people-focus li {
+  margin: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(149, 196, 250, 0.33);
+  background: rgba(92, 124, 255, 0.12);
+  color: rgba(225, 238, 255, 0.95);
+  padding: 0.36rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 650;
 }
 
 .service-detail-hero {
@@ -2751,6 +2820,15 @@ textarea.input {
     padding: 1.4rem;
   }
 
+  .people-card__head {
+    align-items: start;
+  }
+
+  .people-avatar {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
   .section {
     padding: 3.5rem 0;
   }
@@ -2988,6 +3066,10 @@ textarea.input {
   .timeline-step__number {
     width: 2.75rem;
     height: 2.75rem;
+  }
+
+  .people-focus li {
+    font-size: 0.77rem;
   }
 
   .footer-links-list {
