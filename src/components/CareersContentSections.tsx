@@ -26,7 +26,7 @@ export default function CareersContentSections({ initialContent }: CareersConten
   const [content, setContent] = useState<CareersContent>(initialContent);
 
   useEffect(() => {
-    const url = process.env.NEXT_PUBLIC_CAREERS_DATA_URL;
+    const url = process.env.NEXT_PUBLIC_CAREERS_DATA_URL || "https://woza99.github.io/DigX-website/careers-content.sample.json";
 
     if (!url) {
       return;
