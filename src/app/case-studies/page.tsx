@@ -8,6 +8,34 @@ export const metadata: Metadata = {
   description: "Real outcomes from enterprise digital transformation projects. See how DigX helps FTSE 100 and regulated sector clients achieve measurable results.",
 };
 
+const caseLibrary = [
+  {
+    title: "Dynamics 365 Managed Services for a Health and Benefits Programme",
+    summary:
+      "Objectives: Managed D365 services and optimization. Delivered ongoing platform management and member experience enhancements to improve service quality.",
+  },
+  {
+    title: "Optimising Performance and Stability Across an Oracle Estate",
+    summary:
+      "Objectives: Upgrade and modernize Oracle database environments to increase performance, reduce incidents, and support stable migrations.",
+  },
+  {
+    title: "IT Simplification and Automated Data Testing for Banking Operations",
+    summary:
+      "Objectives: Simplify bank infrastructure and implement automated data testing to strengthen operational efficiency and control quality risk.",
+  },
+  {
+    title: "Comprehensive Re-Platforming for a Corporate Banking Core",
+    summary:
+      "Objectives: Build and launch a modern core banking platform to support digital operations and improve long-term delivery velocity.",
+  },
+  {
+    title: "Enhancing CI/CD and Integration for a Financial Services Estate",
+    summary:
+      "Objectives: Introduce CI/CD pipelines and stronger integration controls to accelerate release throughput and increase reliability.",
+  },
+];
+
 export default function CaseStudiesPage() {
   return (
     <>
@@ -21,6 +49,7 @@ export default function CaseStudiesPage() {
               <p className="page-subtitle">See how DigX helps enterprise teams improve release confidence, reduce delivery risk, and accelerate measurable outcomes in complex environments.</p>
               <div className="page-quicklinks">
                 <a className="btn btn-secondary" href="#featured-cases">Featured cases</a>
+                <a className="btn btn-secondary" href="#case-library">Case library</a>
                 <a className="btn btn-secondary" href="#proof-points">Outcome metrics</a>
                 <Link className="btn btn-primary" href="/contact">Request a case walkthrough</Link>
               </div>
@@ -58,6 +87,25 @@ export default function CaseStudiesPage() {
               <article className="card impact-card"><p className="impact-number">40%</p><h3 className="card-title">Faster blocker resolution</h3><p className="card-body">Through clearer ownership and cross-team planning cadence.</p></article>
               <article className="card impact-card"><p className="impact-number">25%</p><h3 className="card-title">Improved release cadence</h3><p className="card-body">Delivered through environment stability and automated controls.</p></article>
               <article className="card impact-card"><p className="impact-number">99.9%</p><h3 className="card-title">Higher platform reliability</h3><p className="card-body">Enabled by monitoring and incident discipline across estates.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" id="case-library">
+          <div className="container">
+            <header className="section-header">
+              <h2>Case library</h2>
+              <p>A broader sample of delivery contexts and transformation outcomes across regulated environments.</p>
+            </header>
+
+            <div className="case-library-grid">
+              {caseLibrary.map((item) => (
+                <article className="case-library-card" key={item.title}>
+                  <h3 className="case-library-card__title">{item.title}</h3>
+                  <p className="case-library-card__summary">{item.summary}</p>
+                  <Link className="case-library-card__link" href="/contact">Read More</Link>
+                </article>
+              ))}
             </div>
           </div>
         </section>
