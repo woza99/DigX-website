@@ -29,11 +29,13 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   font-family: var(--font-source-sans), var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
@@ -42,6 +44,17 @@ body {
     linear-gradient(180deg, #08101d 0%, #08101d 56%, #060c16 100%);
   line-height: 1.6;
   letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a,
+button {
+  overflow-wrap: anywhere;
 }
 
 .sr-only {
@@ -208,6 +221,7 @@ ol li {
   cursor: pointer;
   white-space: nowrap;
   min-width: 0;
+  min-height: 44px;
   flex-shrink: 0;
   position: relative;
 }
@@ -333,6 +347,7 @@ ol li {
 .dropdown-link {
   display: block;
   padding: 0.75rem 1.2rem;
+  min-height: 44px;
   font-weight: 600;
   font-size: 0.93rem;
   color: rgba(255, 255, 255, 0.85);
@@ -383,6 +398,7 @@ ol li {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1.05rem;
+  min-height: 44px;
   border-radius: 999px;
   border: none;
   font-weight: 600;
@@ -523,7 +539,8 @@ ol li {
   font-size: clamp(2.6rem, 5vw, 4.4rem);
   margin: 0 0 1.25rem;
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.14;
+  padding-bottom: 0.04em;
   letter-spacing: -0.02em;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(148, 208, 255, 0.94));
   -webkit-background-clip: text;
@@ -818,7 +835,7 @@ ol li {
 
 .delivery-proof-panel .hero-proof-panel__title {
   font-size: 2.1rem;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 0.2rem;
 }
 
@@ -979,6 +996,8 @@ ol li {
 .section-header h2 {
   font-size: clamp(2rem, 3vw, 2.9rem);
   margin: 0 0 0.75rem;
+  line-height: 1.14;
+  padding-bottom: 0.04em;
   color: var(--heading);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -1073,7 +1092,8 @@ ol li {
 .page-headline {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.12;
+  line-height: 1.17;
+  padding-bottom: 0.04em;
   letter-spacing: -0.02em;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(255, 60, 166, 0.86));
   -webkit-background-clip: text;
@@ -1236,7 +1256,7 @@ ol li {
 .about-facts-intro h2 {
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  line-height: 1.16;
+  line-height: 1.21;
   letter-spacing: -0.02em;
 }
 
@@ -1395,7 +1415,7 @@ ol li {
 .about-process-copy h2 {
   margin: 0;
   font-size: clamp(1.85rem, 3vw, 2.55rem);
-  line-height: 1.16;
+  line-height: 1.21;
   letter-spacing: -0.02em;
 }
 
@@ -1587,7 +1607,8 @@ ol li {
 .careers-headline {
   margin: 0;
   font-size: clamp(2rem, 4.2vw, 3.3rem);
-  line-height: 1.1;
+  line-height: 1.16;
+  padding-bottom: 0.04em;
   letter-spacing: -0.02em;
   background: linear-gradient(125deg, rgba(255, 255, 255, 0.99), rgba(45, 212, 191, 0.92));
   -webkit-background-clip: text;
@@ -1863,7 +1884,7 @@ ol li {
   margin: 0;
   font-size: clamp(1.7rem, 2.6vw, 2.3rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.2;
   padding-bottom: 0.08em;
   letter-spacing: -0.03em;
   background: linear-gradient(130deg, rgba(255, 60, 166, 0.98), rgba(92, 124, 255, 0.95));
@@ -1912,7 +1933,8 @@ ol li {
 .service-detail-title {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.14;
+  line-height: 1.2;
+  padding-bottom: 0.04em;
   letter-spacing: -0.02em;
 }
 
@@ -2050,7 +2072,8 @@ ol li {
 .svc-frame__title {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.05rem);
-  line-height: 1.14;
+  line-height: 1.2;
+  padding-bottom: 0.04em;
   letter-spacing: -0.02em;
 }
 
@@ -2299,6 +2322,7 @@ ol li {
 .input {
   width: 100%;
   padding: 0.95rem 1.1rem;
+  min-height: 48px;
   border-radius: 12px;
   border: 1.5px solid rgba(92, 124, 255, 0.2);
   background: rgba(255, 255, 255, 0.08);
@@ -2444,8 +2468,8 @@ textarea.input {
 }
 
 .footer-social-link {
-  width: 2.05rem;
-  height: 2.05rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   display: inline-flex;
@@ -2715,6 +2739,10 @@ textarea.input {
     align-items: flex-start;
     justify-content: flex-start;
     overflow: visible;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100dvh - var(--header-height) - 1.5rem);
+    overscroll-behavior: contain;
     z-index: 55;
   }
 
@@ -2760,11 +2788,11 @@ textarea.input {
   }
 
   .dropdown-link {
-    padding: 0.62rem 0.9rem;
+    padding: 0.74rem 0.9rem;
   }
 
   .nav-link {
-    padding: 0.68rem 0;
+    padding: 0.74rem 0;
     width: 100%;
   }
 
@@ -2779,6 +2807,14 @@ textarea.input {
 
   .contact-form {
     padding: 1.5rem;
+  }
+
+  .form-grid {
+    gap: 1rem;
+  }
+
+  .input {
+    font-size: 16px;
   }
 
   .footer-grid {
@@ -2827,6 +2863,12 @@ textarea.input {
   .brand img {
     height: 50px;
     max-width: min(210px, 58vw);
+  }
+}
+
+@supports not (height: 100dvh) {
+  body {
+    min-height: 100vh;
   }
 }
 
@@ -2888,7 +2930,37 @@ textarea.input {
   .nav-link,
   .nav-dropdown__toggle,
   .dropdown-link {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
+  }
+
+  .section {
+    padding: 3.25rem 0;
+  }
+
+  .card {
+    padding: 1.35rem;
+    gap: 0.95rem;
+  }
+
+  .contact-form {
+    padding: 1.1rem;
+  }
+
+  .timeline-step {
+    padding: 1.2rem;
+  }
+
+  .timeline-step__number {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .footer-links-list {
+    gap: 0.65rem;
+  }
+
+  .footer-social-list {
+    gap: 0.7rem;
   }
 
   .brand img {
