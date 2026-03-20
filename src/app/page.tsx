@@ -68,16 +68,23 @@ export default function Home() {
 
         <section className="section trusted-strip" id="trusted-by">
           <div className="container">
-            <header className="section-header">
-              <h2>Trusted in regulated, high-stakes delivery</h2>
-              <p>We support enterprise programmes where governance, technical complexity, and pace must work together.</p>
-            </header>
-            <ul className="trust-pillars" aria-label="Core trust signals">
-              <li>FTSE 100 and enterprise programme delivery</li>
-              <li>Embedded multi-vendor coordination model</li>
-              <li>Cloud, integration, and managed operations expertise</li>
-              <li>Long-term partnership beyond go-live</li>
-            </ul>
+            <div className="split-grid home-split home-split--trust">
+              <div className="home-split__intro">
+                <header className="section-header section-header--left">
+                  <h2>Trusted in regulated, high-stakes delivery</h2>
+                  <p>We support enterprise programmes where governance, technical complexity, and pace must work together.</p>
+                </header>
+                <p className="section-callout home-split__callout">The strongest results come when strategic decisions and delivery control are aligned from day one.</p>
+              </div>
+              <div className="home-split__content">
+                <ul className="trust-pillars trust-pillars--stack" aria-label="Core trust signals">
+                  <li>FTSE 100 and enterprise programme delivery</li>
+                  <li>Embedded multi-vendor coordination model</li>
+                  <li>Cloud, integration, and managed operations expertise</li>
+                  <li>Long-term partnership beyond go-live</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -146,67 +153,92 @@ export default function Home() {
 
         <section className="section" id="outcomes">
           <div className="container">
-            <header className="section-header">
-              <h2>Representative outcomes from enterprise programmes</h2>
-              <p>Selected examples of where delivery confidence, release rhythm, and platform stability were improved in parallel.</p>
-            </header>
+            <div className="split-grid home-split home-split--outcomes">
+              <div className="home-split__intro">
+                <header className="section-header section-header--left">
+                  <h2>Representative outcomes from enterprise programmes</h2>
+                  <p>Selected examples of where delivery confidence, release rhythm, and platform stability were improved in parallel.</p>
+                </header>
+                <div className="hero-actions" aria-label="Outcomes links">
+                  <Link className="btn btn-secondary" href="/case-studies">Review case studies</Link>
+                  <Link className="btn btn-primary" href="/contact">Discuss your programme</Link>
+                </div>
+              </div>
 
-            <div className="grid grid--3 trust-grid">
-              <article className="card">
-                <p className="card-kicker">Financial services modernization</p>
-                <h3 className="card-title">Integration simplification across multi-vendor estates</h3>
-                <p className="card-body">Standardized architecture and controls reduced handoff friction and improved cross-team execution quality.</p>
-                <Link className="card-link" href="/case-studies">View the case context →</Link>
-              </article>
+              <div className="home-split__content">
+                <div className="grid grid--2 outcomes-grid">
+                  <article className="card">
+                    <p className="card-kicker">Financial services modernization</p>
+                    <h3 className="card-title">Integration simplification across multi-vendor estates</h3>
+                    <p className="card-body">Standardized architecture and controls reduced handoff friction and improved cross-team execution quality.</p>
+                    <Link className="card-link" href="/case-studies">View the case context →</Link>
+                  </article>
 
-              <article className="card">
-                <p className="card-kicker">Release reliability</p>
-                <h3 className="card-title">Cadence uplift through release and environment control</h3>
-                <p className="card-body">Introduced governance gates, delivery telemetry, and clearer service coordination to improve release predictability.</p>
-                <Link className="card-link" href="/case-studies">See outcome metrics →</Link>
-              </article>
+                  <article className="card">
+                    <p className="card-kicker">Release reliability</p>
+                    <h3 className="card-title">Cadence uplift through release and environment control</h3>
+                    <p className="card-body">Introduced governance gates, delivery telemetry, and clearer service coordination to improve release predictability.</p>
+                    <Link className="card-link" href="/case-studies">See outcome metrics →</Link>
+                  </article>
 
-              <article className="card">
-                <p className="card-kicker">Operational resilience</p>
-                <h3 className="card-title">Higher platform reliability in managed estates</h3>
-                <p className="card-body">Embedded observability, operational playbooks, and disciplined support models improved stability under production pressure.</p>
-                <Link className="card-link" href="/managed-services">Explore the managed model →</Link>
-              </article>
+                  <article className="card outcomes-grid__feature">
+                    <p className="card-kicker">Operational resilience</p>
+                    <h3 className="card-title">Higher platform reliability in managed estates</h3>
+                    <p className="card-body">Embedded observability, operational playbooks, and disciplined support models improved stability under production pressure.</p>
+                    <Link className="card-link" href="/managed-services">Explore the managed model →</Link>
+                  </article>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="section bg-muted" id="approach">
           <div className="container">
-            <header className="section-header">
-              <h2>Our approach</h2>
-              <p>We build lasting partnerships by focusing on clarity, speed, and continuous feedback.</p>
-            </header>
+            <div className="split-grid home-split home-split--approach">
+              <div className="home-split__content">
+                <header className="section-header section-header--left">
+                  <h2>Our approach</h2>
+                  <p>We build lasting partnerships by focusing on clarity, speed, and continuous feedback.</p>
+                </header>
 
-            <div className="timeline">
-              <div className="timeline-step">
-                <div className="timeline-step__number">1</div>
-                <div>
-                  <h3 className="timeline-step__title">Discovery</h3>
-                  <p className="timeline-step__body">We learn your context, goals, and constraints so we can prioritize what moves the needle.</p>
+                <div className="timeline">
+                  <div className="timeline-step">
+                    <div className="timeline-step__number">1</div>
+                    <div>
+                      <h3 className="timeline-step__title">Discovery</h3>
+                      <p className="timeline-step__body">We learn your context, goals, and constraints so we can prioritize what moves the needle.</p>
+                    </div>
+                  </div>
+
+                  <div className="timeline-step">
+                    <div className="timeline-step__number">2</div>
+                    <div>
+                      <h3 className="timeline-step__title">Co-create</h3>
+                      <p className="timeline-step__body">We collaborate with your team to create a plan that is right-sized and ready to execute.</p>
+                    </div>
+                  </div>
+
+                  <div className="timeline-step">
+                    <div className="timeline-step__number">3</div>
+                    <div>
+                      <h3 className="timeline-step__title">Launch and learn</h3>
+                      <p className="timeline-step__body">We help you test quickly, iterate, and embed what works into your operating rhythms.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="timeline-step">
-                <div className="timeline-step__number">2</div>
-                <div>
-                  <h3 className="timeline-step__title">Co-create</h3>
-                  <p className="timeline-step__body">We collaborate with your team to create a plan that is right-sized and ready to execute.</p>
-                </div>
-              </div>
-
-              <div className="timeline-step">
-                <div className="timeline-step__number">3</div>
-                <div>
-                  <h3 className="timeline-step__title">Launch and learn</h3>
-                  <p className="timeline-step__body">We help you test quickly, iterate, and embed what works into your operating rhythms.</p>
-                </div>
-              </div>
+              <article className="card home-split__aside">
+                <p className="card-kicker">First 30 days</p>
+                <h3 className="card-title">What structured early momentum looks like</h3>
+                <ul className="about-list-clean" aria-label="First month outcomes">
+                  <li>Shared delivery baseline and risk framing across teams</li>
+                  <li>Clear ownership model with escalation paths that work</li>
+                  <li>Prioritized plan tied to business outcomes and constraints</li>
+                  <li>Visible progress cadence for programme leadership</li>
+                </ul>
+              </article>
             </div>
           </div>
         </section>

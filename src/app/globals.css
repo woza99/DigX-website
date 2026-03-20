@@ -909,6 +909,60 @@ ol li {
   padding-bottom: 4.1rem;
 }
 
+.home-split {
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.home-split__intro,
+.home-split__content,
+.home-split__aside {
+  border: 1px solid rgba(91, 162, 244, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.55rem;
+}
+
+.home-split__intro {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.home-split__content {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-split__callout {
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 650;
+  color: rgba(236, 244, 255, 0.94);
+}
+
+.trust-pillars--stack {
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.home-split--outcomes {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.outcomes-grid__feature {
+  grid-column: 1 / -1;
+}
+
+.home-split--approach {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.home-split__aside {
+  min-height: 100%;
+}
+
 .trust-pillars {
   list-style: none;
   margin: 0;
@@ -2856,6 +2910,16 @@ textarea.input {
   .about-purpose-main,
   .about-service-card {
     padding: 1.4rem;
+  }
+
+  .home-split {
+    gap: 0.95rem;
+  }
+
+  .home-split__intro,
+  .home-split__content,
+  .home-split__aside {
+    padding: 1.25rem;
   }
 
   .people-card__head {
