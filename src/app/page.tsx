@@ -13,22 +13,26 @@ export default function Home() {
     <>
       <SiteHeader />
 
-      <main id="main-content">
+      <main id="main-content" className="home-main">
         <section className="hero hero--banner" aria-label="DigX hero section">
           <div className="hero__overlay" />
           <div className="container hero-inner">
             <div className="hero-copy">
               <p className="hero-eyebrow">Enterprise delivery consultancy</p>
-              <h1 className="hero-title">From complex transformation to measurable enterprise outcomes.</h1>
+              <h1 className="hero-title">Digital transformation leadership for organizations that cannot afford delivery drift.</h1>
               <p className="hero-subtitle">
-                DigX helps regulated and high-change organizations improve release speed, reduce delivery risk,
-                and modernize critical platforms with clear governance and execution control.
+                DigX partners with executive and programme leadership teams to stabilize delivery, modernize
+                platforms, and improve operational resilience without losing governance control.
               </p>
               <div className="hero-actions">
                 <Link className="btn btn-primary" href="/contact">Book a strategy call</Link>
                 <Link className="btn btn-secondary" href="/case-studies">See relevant case studies</Link>
               </div>
-              <p className="hero-micro-link"><Link href="#service-selector">Explore services by challenge</Link></p>
+              <div className="hero-jumps" aria-label="Homepage quick navigation">
+                <Link href="#service-selector">Priority pathways</Link>
+                <Link href="#outcomes">Representative outcomes</Link>
+                <Link href="#approach">Delivery approach</Link>
+              </div>
               <ul className="hero-proof" aria-label="DigX credibility highlights">
                 <li>40% lower integration complexity</li>
                 <li>25% faster release cadence</li>
@@ -38,7 +42,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section delivery-proof-section" aria-label="Delivery proof highlights">
+        <section className="section section--compact trusted-strip" id="trusted-by">
+          <div className="container">
+            <div className="split-grid home-split home-split--trust">
+              <div className="home-split__intro">
+                <header className="section-header section-header--left">
+                  <p className="section-eyebrow">Why leaders engage DigX</p>
+                  <h2>Trusted in regulated, high-stakes delivery</h2>
+                  <p>We support enterprise programmes where pace, governance, and technical complexity need to move in lockstep.</p>
+                </header>
+                <p className="section-callout home-split__callout">The best outcomes happen when leadership decisions and delivery controls are aligned from the first sprint.</p>
+              </div>
+              <div className="home-split__content">
+                <ul className="trust-pillars trust-pillars--stack" aria-label="Core trust signals">
+                  <li>FTSE 100 and enterprise programme delivery</li>
+                  <li>Embedded multi-vendor coordination model</li>
+                  <li>Cloud, integration, and managed operations expertise</li>
+                  <li>Long-term partnership beyond go-live</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section--compact delivery-proof-section" aria-label="Delivery proof highlights">
           <div className="container">
             <aside className="hero-proof-panel delivery-proof-panel" aria-label="Delivery proof">
               <h2 className="hero-proof-panel__title">Delivery proof</h2>
@@ -56,7 +83,7 @@ export default function Home() {
                   <p className="hero-proof-metric__label">Platform reliability in managed estates</p>
                 </article>
               </div>
-              <p className="hero-proof-panel__caption">Trusted delivery contexts</p>
+              <p className="hero-proof-panel__caption">Representative enterprise contexts</p>
               <ul className="hero-logo-row" aria-label="Representative client contexts">
                 <li>Phoenix Group</li>
                 <li>Aviva</li>
@@ -66,54 +93,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section trusted-strip" id="trusted-by">
-          <div className="container">
-            <div className="split-grid home-split home-split--trust">
-              <div className="home-split__intro">
-                <header className="section-header section-header--left">
-                  <h2>Trusted in regulated, high-stakes delivery</h2>
-                  <p>We support enterprise programmes where governance, technical complexity, and pace must work together.</p>
-                </header>
-                <p className="section-callout home-split__callout">The strongest results come when strategic decisions and delivery control are aligned from day one.</p>
-              </div>
-              <div className="home-split__content">
-                <ul className="trust-pillars trust-pillars--stack" aria-label="Core trust signals">
-                  <li>FTSE 100 and enterprise programme delivery</li>
-                  <li>Embedded multi-vendor coordination model</li>
-                  <li>Cloud, integration, and managed operations expertise</li>
-                  <li>Long-term partnership beyond go-live</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="service-selector">
+        <section className="section section--band" id="service-selector">
           <div className="container">
             <header className="section-header">
-              <h2>Select the delivery track that matches your enterprise priority</h2>
-              <p>Each service model is designed for regulated environments where pace, control, and resilience must align.</p>
+              <p className="section-eyebrow">Choose your starting lane</p>
+              <h2>Start with your immediate leadership priority</h2>
+              <p>A top-tier programme usually starts by choosing the right operating lane before adding more scope.</p>
             </header>
 
             <div className="grid grid--3">
               <article className="card">
-                <p className="card-kicker">Strategic transformation</p>
-                <h3 className="card-title">Programme leadership for complex enterprise change</h3>
-                <p className="card-body">Use Enterprise Digital Change when your programme needs board-level clarity, governance discipline, and execution momentum.</p>
+                <p className="card-kicker">Priority 01</p>
+                <h3 className="card-title">Regain programme control across complex transformation</h3>
+                <p className="card-body">Use Enterprise Digital Change when your board needs a clear plan, tighter governance, and measurable progress across workstreams.</p>
                 <Link className="card-link" href="/enterprise-digital-change">Explore Enterprise Digital Change →</Link>
               </article>
 
               <article className="card">
-                <p className="card-kicker">Platform reliability</p>
-                <h3 className="card-title">Managed operations with measurable service confidence</h3>
-                <p className="card-body">Use Managed Services for SLA-aligned support, release assurance, and proactive incident prevention across critical estates.</p>
+                <p className="card-kicker">Priority 02</p>
+                <h3 className="card-title">Improve reliability and confidence in live operations</h3>
+                <p className="card-body">Use Managed Services when production stability, SLA performance, and release assurance need sustained operational discipline.</p>
                 <Link className="card-link" href="/managed-services">Explore Managed Services →</Link>
               </article>
 
               <article className="card">
-                <p className="card-kicker">Technical acceleration</p>
-                <h3 className="card-title">Integration and engineering capability at delivery speed</h3>
-                <p className="card-body">Use Technical and Integration Services for architecture, CI/CD modernization, and reliable multi-system execution.</p>
+                <p className="card-kicker">Priority 03</p>
+                <h3 className="card-title">Accelerate integration and engineering throughput</h3>
+                <p className="card-body">Use Technical and Integration Services when architecture complexity and multi-system dependency are slowing delivery speed.</p>
                 <Link className="card-link" href="/technical-integration-services">Explore Technical &amp; Integration Services →</Link>
               </article>
             </div>
@@ -125,10 +131,11 @@ export default function Home() {
             <div className="split-grid">
               <div>
                 <header className="section-header section-header--left">
+                  <p className="section-eyebrow">Operating model</p>
                   <h2>How we engage with your teams</h2>
                   <p>
-                    DigX operates as an embedded enterprise partner, aligning leadership decisions, delivery governance,
-                    and technical execution across internal teams and third-party suppliers.
+                    DigX works as an embedded partner model that aligns leadership direction, governance discipline,
+                    and delivery execution across internal teams and third-party suppliers.
                   </p>
                 </header>
                 <div className="hero-actions" aria-label="Engagement links">
@@ -139,7 +146,7 @@ export default function Home() {
 
               <article className="card">
                 <p className="card-kicker">Enterprise working model</p>
-                <h3 className="card-title">Built for regulated delivery environments</h3>
+                <h3 className="card-title">Built for regulated and audit-sensitive delivery environments</h3>
                 <ul className="about-list-clean" aria-label="DigX engagement strengths">
                   <li>Joint governance across business, technology, and delivery leadership</li>
                   <li>Multi-vendor alignment with clear accountability and escalation paths</li>
@@ -151,13 +158,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="outcomes">
+        <section className="section section--band" id="outcomes">
           <div className="container">
             <div className="split-grid home-split home-split--outcomes">
               <div className="home-split__intro">
                 <header className="section-header section-header--left">
+                  <p className="section-eyebrow">Proof of impact</p>
                   <h2>Representative outcomes from enterprise programmes</h2>
-                  <p>Selected examples of where delivery confidence, release rhythm, and platform stability were improved in parallel.</p>
+                  <p>Examples where delivery confidence, release rhythm, and platform stability improved together.</p>
                 </header>
                 <div className="hero-actions" aria-label="Outcomes links">
                   <Link className="btn btn-secondary" href="/case-studies">Review case studies</Link>
@@ -170,14 +178,14 @@ export default function Home() {
                   <article className="card">
                     <p className="card-kicker">Financial services modernization</p>
                     <h3 className="card-title">Integration simplification across multi-vendor estates</h3>
-                    <p className="card-body">Standardized architecture and controls reduced handoff friction and improved cross-team execution quality.</p>
+                    <p className="card-body">Standardized architecture patterns and delivery controls reduced handoff friction across teams and suppliers.</p>
                     <Link className="card-link" href="/case-studies">View the case context →</Link>
                   </article>
 
                   <article className="card">
                     <p className="card-kicker">Release reliability</p>
                     <h3 className="card-title">Cadence uplift through release and environment control</h3>
-                    <p className="card-body">Introduced governance gates, delivery telemetry, and clearer service coordination to improve release predictability.</p>
+                    <p className="card-body">Introduced governance gates, delivery telemetry, and stronger service coordination to improve release predictability.</p>
                     <Link className="card-link" href="/case-studies">See outcome metrics →</Link>
                   </article>
 
@@ -198,32 +206,33 @@ export default function Home() {
             <div className="split-grid home-split home-split--approach">
               <div className="home-split__content">
                 <header className="section-header section-header--left">
-                  <h2>Our approach</h2>
-                  <p>We build lasting partnerships by focusing on clarity, speed, and continuous feedback.</p>
+                  <p className="section-eyebrow">Delivery blueprint</p>
+                  <h2>A wireframe-grade delivery approach for enterprise change</h2>
+                  <p>We follow a simple, disciplined progression so executives have clarity and delivery teams have momentum.</p>
                 </header>
 
                 <div className="timeline">
                   <div className="timeline-step">
                     <div className="timeline-step__number">1</div>
                     <div>
-                      <h3 className="timeline-step__title">Discovery</h3>
-                      <p className="timeline-step__body">We learn your context, goals, and constraints so we can prioritize what moves the needle.</p>
+                      <h3 className="timeline-step__title">Frame</h3>
+                      <p className="timeline-step__body">We define the decision frame, constraints, and measurable outcomes with your leadership team.</p>
                     </div>
                   </div>
 
                   <div className="timeline-step">
                     <div className="timeline-step__number">2</div>
                     <div>
-                      <h3 className="timeline-step__title">Co-create</h3>
-                      <p className="timeline-step__body">We collaborate with your team to create a plan that is right-sized and ready to execute.</p>
+                      <h3 className="timeline-step__title">Mobilize</h3>
+                      <p className="timeline-step__body">We establish ownership, governance, and delivery rhythms that can scale across streams.</p>
                     </div>
                   </div>
 
                   <div className="timeline-step">
                     <div className="timeline-step__number">3</div>
                     <div>
-                      <h3 className="timeline-step__title">Launch and learn</h3>
-                      <p className="timeline-step__body">We help you test quickly, iterate, and embed what works into your operating rhythms.</p>
+                      <h3 className="timeline-step__title">Scale</h3>
+                      <p className="timeline-step__body">We convert initial wins into repeatable operating patterns across delivery and operations.</p>
                     </div>
                   </div>
                 </div>
@@ -246,8 +255,9 @@ export default function Home() {
         <section className="section" id="contact">
           <div className="container">
             <header className="section-header">
-              <h2>Share your delivery objective. We will map a practical route.</h2>
-              <p>Tell us your goals, constraints, and current blockers. We will respond with a focused recommendation and the right service path.</p>
+              <p className="section-eyebrow">Decision point</p>
+              <h2>Share your current delivery challenge and we will map the right route.</h2>
+              <p>Tell us the objective, pressure points, and timeline. We will respond with a focused recommendation and next-step options.</p>
             </header>
 
             <form className="contact-form">

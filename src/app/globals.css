@@ -771,6 +771,33 @@ ol li {
   text-underline-offset: 3px;
 }
 
+.hero-jumps {
+  margin-top: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.hero-jumps a {
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(167, 194, 229, 0.24);
+  background: rgba(7, 12, 22, 0.46);
+  color: rgba(230, 239, 252, 0.92);
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+}
+
+.hero-jumps a:hover,
+.hero-jumps a:focus-visible {
+  border-color: rgba(91, 162, 244, 0.5);
+  background: rgba(91, 162, 244, 0.18);
+  color: #ffffff;
+}
+
 .hero-proof-panel {
   border: 1px solid rgba(91, 162, 244, 0.28);
   border-radius: var(--radius);
@@ -1047,6 +1074,35 @@ ol li {
   position: relative;
 }
 
+.home-main .section {
+  scroll-margin-top: calc(var(--header-height) + 1.2rem);
+}
+
+.home-main .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1120px, calc(100% - 2rem));
+  height: 1px;
+  background: linear-gradient(90deg, rgba(91, 162, 244, 0), rgba(91, 162, 244, 0.35), rgba(91, 162, 244, 0));
+  opacity: 0.75;
+}
+
+.home-main .section:first-of-type::before {
+  display: none;
+}
+
+.section--compact {
+  padding-top: 4.2rem;
+  padding-bottom: 3.8rem;
+}
+
+.section--band {
+  background: linear-gradient(180deg, rgba(92, 124, 255, 0.07), rgba(92, 124, 255, 0));
+}
+
 .bg-muted {
   background: rgba(92, 124, 255, 0.08);
   border-top: 1px solid rgba(92, 124, 255, 0.1);
@@ -1057,6 +1113,15 @@ ol li {
   max-width: 56rem;
   margin: 0 auto 2.75rem;
   text-align: center;
+}
+
+.section-eyebrow {
+  margin: 0 0 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: rgba(255, 60, 166, 0.9);
 }
 
 .section-header--center {
@@ -1097,6 +1162,11 @@ ol li {
 }
 
 .section-header--left p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-header--left .section-eyebrow {
   margin-left: 0;
   margin-right: 0;
 }
@@ -2901,6 +2971,15 @@ textarea.input {
     text-align: center;
   }
 
+  .hero-jumps {
+    gap: 0.45rem;
+  }
+
+  .hero-jumps a {
+    width: 100%;
+    text-align: center;
+  }
+
   .about-story-copy,
   .page-story-copy {
     padding: 1.4rem;
@@ -2933,6 +3012,16 @@ textarea.input {
 
   .section {
     padding: 3.5rem 0;
+  }
+
+  .section--compact {
+    padding-top: 3rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.69rem;
+    letter-spacing: 0.14em;
   }
 
   .nav {
