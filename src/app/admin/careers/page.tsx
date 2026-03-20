@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 import Link from "next/link";
-import { adminLogoutAction, isAdminSessionActive } from "@/app/admin/actions";
 import { hiringSteps, roleTracks } from "@/content/careers";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -11,13 +9,7 @@ export const metadata: Metadata = {
   description: "Starter admin dashboard for careers content management.",
 };
 
-export default async function AdminCareersPage() {
-  const isLoggedIn = await isAdminSessionActive();
-
-  if (!isLoggedIn) {
-    redirect("/admin/login");
-  }
-
+export default function AdminCareersPage() {
   return (
     <>
       <SiteHeader />
@@ -61,9 +53,7 @@ export default async function AdminCareersPage() {
               <p className="admin-note">Current editable source: src/content/careers.ts</p>
               <div className="hero-actions">
                 <Link className="btn btn-secondary" href="/careers">View public careers page</Link>
-                <form action={adminLogoutAction}>
-                  <button className="btn btn-primary" type="submit">Sign out</button>
-                </form>
+                <Link className="btn btn-primary" href="/admin/login">Admin access notes</Link>
               </div>
             </article>
           </div>
