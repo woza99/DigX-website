@@ -35,8 +35,12 @@ export default function Home() {
                 <li>Tier-1 financial services experience</li>
               </ul>
             </div>
+          </div>
+        </section>
 
-            <aside className="hero-proof-panel" aria-label="Delivery proof">
+        <section className="section delivery-proof-section" aria-label="Delivery proof highlights">
+          <div className="container">
+            <aside className="hero-proof-panel delivery-proof-panel" aria-label="Delivery proof">
               <h2 className="hero-proof-panel__title">Delivery proof</h2>
               <div className="hero-proof-metrics">
                 <article className="hero-proof-metric">
