@@ -1199,6 +1199,10 @@ ol li {
   padding: 1.6rem;
 }
 
+.home-work-main .timeline {
+  grid-template-columns: 1fr;
+}
+
 .home-work-aside {
   display: grid;
   gap: 1rem;
