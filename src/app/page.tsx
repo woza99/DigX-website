@@ -84,112 +84,93 @@ export default function Home() {
         <section className="section" id="service-selector">
           <div className="container">
             <header className="section-header">
-              <h2>Choose the delivery model that matches your challenge</h2>
-              <p>Start with your priority, then move directly to the right DigX service path.</p>
+              <h2>Select the delivery track that matches your enterprise priority</h2>
+              <p>Each service model is designed for regulated environments where pace, control, and resilience must align.</p>
             </header>
 
             <div className="grid grid--3">
               <article className="card">
-                <p className="card-kicker">Priority: Strategic transformation</p>
-                <h3 className="card-title">Reshape enterprise delivery with controlled change</h3>
-                <p className="card-body">Use Enterprise Digital Change when you need programme-level strategy, governance, and execution leadership.</p>
+                <p className="card-kicker">Strategic transformation</p>
+                <h3 className="card-title">Programme leadership for complex enterprise change</h3>
+                <p className="card-body">Use Enterprise Digital Change when your programme needs board-level clarity, governance discipline, and execution momentum.</p>
                 <Link className="card-link" href="/enterprise-digital-change">Explore Enterprise Digital Change →</Link>
               </article>
 
               <article className="card">
-                <p className="card-kicker">Priority: Platform reliability</p>
-                <h3 className="card-title">Stabilize critical services while improving pace</h3>
-                <p className="card-body">Use Managed Services for SLA-led support, release governance, and proactive operational control.</p>
+                <p className="card-kicker">Platform reliability</p>
+                <h3 className="card-title">Managed operations with measurable service confidence</h3>
+                <p className="card-body">Use Managed Services for SLA-aligned support, release assurance, and proactive incident prevention across critical estates.</p>
                 <Link className="card-link" href="/managed-services">Explore Managed Services →</Link>
               </article>
 
               <article className="card">
-                <p className="card-kicker">Priority: Technical acceleration</p>
-                <h3 className="card-title">Integrate, automate, and scale technical execution</h3>
-                <p className="card-body">Use Technical and Integration Services for architecture, automation, CI/CD, and cloud foundations.</p>
+                <p className="card-kicker">Technical acceleration</p>
+                <h3 className="card-title">Integration and engineering capability at delivery speed</h3>
+                <p className="card-body">Use Technical and Integration Services for architecture, CI/CD modernization, and reliable multi-system execution.</p>
                 <Link className="card-link" href="/technical-integration-services">Explore Technical &amp; Integration Services →</Link>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="section" id="who-we-are">
+        <section className="section" id="engagement-model">
           <div className="container">
-            <header className="section-header">
-              <h2>Who we are</h2>
-              <p className="section-lead">
-                DigX is a UK-based digital transformation and IT consulting partner. Founded in 2012, we
-                collaborate with top-tier professional services firms and FTSE 100 clients, with deep
-                strength in regulated and financial services environments.
-              </p>
-            </header>
-            <p className="section-callout">
-              We don’t work in isolation. We integrate with your teams and partners to deliver complex
-              change with precision, from technical leadership through to operational support.
-            </p>
-          </div>
-        </section>
-
-        <section className="section" id="services">
-          <div className="container">
-            <header className="section-header">
-              <h2>Featured outcomes from similar programmes</h2>
-              <p>Representative examples of how DigX improves delivery confidence and operational performance.</p>
-            </header>
-
-            <div className="grid grid--2">
-              <article className="card">
-                <p className="card-kicker">Financial services modernization</p>
-                <h3 className="card-title">Integration simplification across a multi-vendor estate</h3>
-                <p className="card-body">Standardized integration patterns and governance controls reduced delivery friction and improved cross-team throughput.</p>
-                <Link className="card-link" href="/case-studies">View the case context →</Link>
-              </article>
+            <div className="split-grid">
+              <div>
+                <header className="section-header section-header--left">
+                  <h2>How we engage with your teams</h2>
+                  <p>
+                    DigX operates as an embedded enterprise partner, aligning leadership decisions, delivery governance,
+                    and technical execution across internal teams and third-party suppliers.
+                  </p>
+                </header>
+                <div className="hero-actions" aria-label="Engagement links">
+                  <Link className="btn btn-secondary" href="/about">See our operating model</Link>
+                  <Link className="btn btn-primary" href="/collaborative-project-delivery">View collaboration services</Link>
+                </div>
+              </div>
 
               <article className="card">
-                <p className="card-kicker">Release reliability</p>
-                <h3 className="card-title">Cadence uplift through environment and release stabilization</h3>
-                <p className="card-body">Introduced release controls, automated quality gates, and tighter service coordination to improve deployment confidence.</p>
-                <Link className="card-link" href="/case-studies">See outcome metrics →</Link>
-              </article>
-
-              <article className="card">
-                <p className="card-kicker">Operational resilience</p>
-                <h3 className="card-title">Higher platform reliability in business-critical workflows</h3>
-                <p className="card-body">Embedded observability and incident disciplines delivered stronger uptime and faster blocker resolution.</p>
-                <Link className="card-link" href="/managed-services">Explore delivery model →</Link>
-              </article>
-
-              <article className="card">
-                <p className="card-kicker">Team augmentation</p>
-                <h3 className="card-title">Embedded specialists accelerated programme momentum</h3>
-                <p className="card-body">Strategic and technical specialists integrated with internal teams to reduce dependency bottlenecks.</p>
-                <Link className="card-link" href="/collaborative-project-delivery">See collaboration model →</Link>
+                <p className="card-kicker">Enterprise working model</p>
+                <h3 className="card-title">Built for regulated delivery environments</h3>
+                <ul className="about-list-clean" aria-label="DigX engagement strengths">
+                  <li>Joint governance across business, technology, and delivery leadership</li>
+                  <li>Multi-vendor alignment with clear accountability and escalation paths</li>
+                  <li>Operational and release discipline integrated from the start</li>
+                  <li>Capability transfer that leaves your teams stronger over time</li>
+                </ul>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="section" id="why">
+        <section className="section" id="outcomes">
           <div className="container">
             <header className="section-header">
-              <h2>Why teams choose us</h2>
-              <p>We focus on clarity, speed, and outcomes so your team can move with confidence.</p>
+              <h2>Representative outcomes from enterprise programmes</h2>
+              <p>Selected examples of where delivery confidence, release rhythm, and platform stability were improved in parallel.</p>
             </header>
 
-            <div className="grid grid--3">
+            <div className="grid grid--3 trust-grid">
               <article className="card">
-                <h3 className="card-title">Clear decisions</h3>
-                <p className="card-body">We strip away ambiguity with clear outcomes, aligned priorities, and tight feedback loops.</p>
+                <p className="card-kicker">Financial services modernization</p>
+                <h3 className="card-title">Integration simplification across multi-vendor estates</h3>
+                <p className="card-body">Standardized architecture and controls reduced handoff friction and improved cross-team execution quality.</p>
+                <Link className="card-link" href="/case-studies">View the case context →</Link>
               </article>
 
               <article className="card">
-                <h3 className="card-title">Fast momentum</h3>
-                <p className="card-body">We help you build velocity by removing blockers and keeping focus on the highest impact work.</p>
+                <p className="card-kicker">Release reliability</p>
+                <h3 className="card-title">Cadence uplift through release and environment control</h3>
+                <p className="card-body">Introduced governance gates, delivery telemetry, and clearer service coordination to improve release predictability.</p>
+                <Link className="card-link" href="/case-studies">See outcome metrics →</Link>
               </article>
 
               <article className="card">
-                <h3 className="card-title">Trusted partnership</h3>
-                <p className="card-body">Our role is to be part of your team, sharing accountability, knowledge, and the long-term vision.</p>
+                <p className="card-kicker">Operational resilience</p>
+                <h3 className="card-title">Higher platform reliability in managed estates</h3>
+                <p className="card-body">Embedded observability, operational playbooks, and disciplined support models improved stability under production pressure.</p>
+                <Link className="card-link" href="/managed-services">Explore the managed model →</Link>
               </article>
             </div>
           </div>
@@ -230,35 +211,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="clients">
-          <div className="container">
-            <header className="section-header">
-              <h2>Where we deliver strongest</h2>
-              <p>Representative contexts where DigX provides high-impact transformation support.</p>
-            </header>
-
-            <div className="grid grid--3 trust-grid">
-              <article className="card trust-card">
-                <h3 className="card-title">Financial services and FinTech</h3>
-                <p className="card-body">Complex regulated programmes requiring strong governance, integration control, and delivery precision.</p>
-              </article>
-              <article className="card trust-card">
-                <h3 className="card-title">Enterprise platform modernisation</h3>
-                <p className="card-body">Cross-team transformation initiatives covering architecture, release discipline, and operational resilience.</p>
-              </article>
-              <article className="card trust-card">
-                <h3 className="card-title">Managed and collaborative delivery</h3>
-                <p className="card-body">Embedded specialists and service teams that increase programme momentum with lower execution risk.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section className="section" id="contact">
           <div className="container">
             <header className="section-header">
-              <h2>Tell us the outcome you need. We will map the fastest route.</h2>
-              <p>Share your goals and constraints. We will respond with a practical recommendation and delivery model.</p>
+              <h2>Share your delivery objective. We will map a practical route.</h2>
+              <p>Tell us your goals, constraints, and current blockers. We will respond with a focused recommendation and the right service path.</p>
             </header>
 
             <form className="contact-form">
