@@ -638,6 +638,12 @@ ol li {
   .split-grid {
     grid-template-columns: 1fr;
   }
+
+  .home-overview__top,
+  .home-overview__services,
+  .home-overview__outcomes {
+    grid-template-columns: 1fr;
+  }
 }
 
 .media-card {
@@ -1101,6 +1107,101 @@ ol li {
 
 .section--band {
   background: linear-gradient(180deg, rgba(92, 124, 255, 0.07), rgba(92, 124, 255, 0));
+}
+
+.home-overview {
+  padding-top: 4.7rem;
+}
+
+.home-overview__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.home-overview__intro {
+  border: 1px solid rgba(91, 162, 244, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.7rem;
+  display: grid;
+  gap: 1.05rem;
+}
+
+.home-overview__title {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.home-overview__body {
+  margin: 0;
+  color: rgba(229, 238, 252, 0.86);
+  line-height: 1.7;
+}
+
+.home-overview__services {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-overview__services .card {
+  min-height: 100%;
+}
+
+.home-overview__outcomes {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.home-outcome {
+  margin: 0;
+  border: 1px solid rgba(91, 162, 244, 0.2);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.05rem 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.home-outcome h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: rgba(225, 241, 255, 0.98);
+}
+
+.home-outcome p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(214, 228, 247, 0.84);
+}
+
+.home-overview__actions {
+  margin-top: 1.2rem;
+}
+
+.home-work-grid {
+  align-items: stretch;
+}
+
+.home-work-main {
+  border: 1px solid rgba(91, 162, 244, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.6rem;
+}
+
+.home-work-aside {
+  display: grid;
+  gap: 1rem;
 }
 
 .bg-muted {
